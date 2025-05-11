@@ -3,7 +3,9 @@ import glob
 import openpyxl
 
 # Az Excel fájlok elérési útja
-file_path = 'H:/dp_pdf/innpro/xlsx/*.xlsx'  # Cseréld le a megfelelő elérési útra
+file_path = 'H:/dp_pdf/innpro/keszteszt/merge/*.xlsx'  # Cseréld le a megfelelő elérési útra
+
+
 
 # Az összes Excel fájl beolvasása
 all_files = glob.glob(file_path)
@@ -20,4 +22,4 @@ for file in all_files:
 combined_df = pd.concat(dataframes, ignore_index=True)
 
 # Az összefűzött DataFrame mentése egy új Excel fájlba
-combined_df.to_excel('H:/dp_pdf/innpro/xlsx/combined_file.xlsx', index=False)
+combined_df.to_excel('H:/dp_pdf/innpro/keszteszt/merge/combined_file.xlsx', index=False)
