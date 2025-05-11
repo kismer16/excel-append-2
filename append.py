@@ -15,7 +15,8 @@ dataframes = []
 
 # Minden fájl beolvasása és hozzáadása a listához
 for file in all_files:
-    df = pd.read_excel(file)
+    df = pd.read_excel(file,dtype=str)
+
     dataframes.append(df)
 
 # Az összes DataFrame összefűzése
